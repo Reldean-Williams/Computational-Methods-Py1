@@ -12,3 +12,8 @@ predicted = [2, 4, 6, 8, 10]
 
 print(mse(actual, predicted))
 
+def sum():
+  numbers = input("The sum of the first N odd natural numbers")
+  
+  for i in range(1, n+1)
+
