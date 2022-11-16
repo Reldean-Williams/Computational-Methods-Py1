@@ -1,5 +1,5 @@
+from ast import Num
 import numpy as np
-
 
 def mse(actual, predicted):
     actual = np.array(actual)
@@ -20,4 +20,3 @@ while num <= numbers:
      sum = sum + num
     num = num + 2
     print("Odd numbers", sum)
-
