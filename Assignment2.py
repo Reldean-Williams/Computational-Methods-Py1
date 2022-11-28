@@ -42,3 +42,4 @@ degraded = degraded[:,1]
 plt.plot(degraded)
 plt.title("Degraded Audio")
 plt.show()
+
