@@ -27,23 +27,18 @@ def median_filter(data, filter_size):
 
             median_array.append(median)
 
-
         return median_array
     else:
-        print("Window size not odd number")
+        print("The filter_size is not odd")
 
+samplerate, original = wavfile.read("source_hot_fives_.wav")
+original = original[:,1]
+plt.plot(original)
+plt.title("Original Audio")
+plt.show()
 
-if __name__ == "__main__":
-
-    data = [1, 2, 3, 6, 10, 7, 2, 1]
-    filter_size = 3
-
-    print(" data : ", data)
-    filter_out = signal.medfilt(data, kernel_size = filter_size) 
-    print(" medfilt : ", filter_out) 
-
-    median_filter(data, filter_size)
-
-    samplerate, data = wavfile.read("source_hot_fives.wav")
-    plt.plot(data)
-    plt.show()
+samplerate, degraded = wavfile.read("deg_.wav")
+degraded = degraded[:,1]
+plt.plot(degraded)
+plt.title("Degraded Audio")
+plt.show()
