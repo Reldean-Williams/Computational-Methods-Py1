@@ -45,8 +45,8 @@ Si(x) = ai + bi · (x − xi) + ci · (x − xi)2 + di · (x − xi)3
 
 In particular, XXXX were tested and XXX was observed to deliver the lowest MSE, as shown in the figure below.
 
-<img src="Original Audio.png" width="350">
-<img src="Degraded Audio.png" width="350">
+<img src="Original.png" width="350">
+<img src="Degraded.png" width="350">
 
 
 The restored waveform <output_medianFilter.wav> with the optimal filter length is given below:
@@ -59,7 +59,7 @@ Using the cubic splines, we observe ....
 The restored waveform <output_cubicSplines.wav> with the optimal filter length is given below:
 
 
-3. Comparing the median filter and cubic splines interpolation methods, I notice that the cubic splines method achieves a lower MSE. The runtime of XX method is .....
+3. Comparing the median filter and cubic splines interpolation methods, I notice that the cubic splines method achieves a lower MSE. The execution time of the median filter method is 0.07.
 
 After listening to the two restored files, we notice ...
 
