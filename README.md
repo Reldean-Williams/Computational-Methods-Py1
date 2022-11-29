@@ -19,7 +19,7 @@ The cubic spline method involves fitting a succession of distinctive cubic polyn
 
 ## Installation and Execution
 
-Provide details on the Python version and libraries (e.g. numpy version) you are using. One easy way to do it is to do that automatically:
+Provide details on the Python version and libraries (e.g. numpy version) you are using. 
 ```sh                                 
 pip3 install pipreqs
 
@@ -48,9 +48,7 @@ The restored cubic spline waveform with the optimal filter length is given above
 2. Observations drawn from the cubic splines is that the MSE is lower and the execution time is 16 seconds.
 Using the cubic splines, I observe that this method gives an interpolating polynomial that is smoother and has smaller error than the median filtering.
 
-3. Comparing the median filter and cubic splines interpolation methods, I notice that the cubic splines method achieves a lower MSE. The execution time of the median filter method is 0.07.
-
-After listening to the two restored files, we notice ...
+3. Comparing the median filter and cubic splines interpolation methods, I notice that the cubic splines method achieves a lower MSE. 
 
 
 ---
