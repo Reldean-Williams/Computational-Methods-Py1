@@ -4,7 +4,7 @@ import numpy as np
 def Median_Filter(data, window):
     
     '''
-    median_filter sorts the input Audio data array and 
+    Median_Filter sorts the input Audio data array and 
     Returns the median from Audio data array.
 
             Inputs:
@@ -35,4 +35,4 @@ def Median_Filter(data, window):
         return median
     else:
         # Gives an error for even window
-        print("Window has to be odd number")
+        print("Window has to be an odd number")
