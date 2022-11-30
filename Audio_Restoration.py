@@ -26,7 +26,7 @@ def get_filter_len(degraded1):
                     filter_len  (int)    : filter length 
     '''
 
-    # Computing the MSE for the window size from 7 to 
+    # Computing the MSE for the window size from 7 to 23
     filter_sizes = [7,9,11,13,15,17,19,21,23]
 
     MSE = np.zeros(len(filter_sizes))
@@ -40,11 +40,10 @@ def get_filter_len(degraded1):
  
         for index in range(len(degraded1)):
             if( abs(degraded1[index]) >= Threshold ):            
-                res_data[index] = median.median_filter(degraded1[index - padding : index + padding + 1], filter_size)
+                res_data[index] = median.Median_Filter(degraded1[index - padding : index + padding + 1], filter_size)
 
         MSE[w] =  np.square(np.subtract(original1,res_data)).mean()
 
-    
     
     # Returns a minimum index MSE
     min_index = np.where(MSE == MSE.min())
@@ -106,8 +105,6 @@ if __name__ == "__main__":
     # Computing the best filter length
     filter_size = get_filter_len(degraded1)
 
-    # print(" Best filter len : ",window)
-
     # Adding a data point before and after the click to find the median of data
     padding = (filter_size - 1) // 2
 
@@ -115,7 +112,7 @@ if __name__ == "__main__":
 
     for index in range(len(degraded1)):
         if( detect[index] == 1 ):
-            res_data[index] = median.median_filter(degraded1[index - padding : index + padding + 1], filter_size)
+            res_data[index] = median.Median_Filter(degraded1[index - padding : index + padding + 1], filter_size)
 
     stop = time.time()  
 
@@ -128,7 +125,7 @@ if __name__ == "__main__":
     axs[1].plot(degraded1)
     axs[1].set_title('Degraded Audio')
     axs[2].plot(res_data)
-    axs[2].set_title('Restored Audio - Median Filter')
+    axs[2].set_title('Restored Median Filter')
 
     for ax in axs.flat:
         ax.label_outer()
@@ -137,17 +134,17 @@ if __name__ == "__main__":
 
     # Writing the restored data to create an output audio file
     res_data1 = np.array(res_data)
-    write("output_median_filter.wav", samplerate, res_data1.astype(np.int16))
+    write("output_Median_Filter.wav", samplerate, res_data1.astype(np.int16))
 
     # Playing the Output Audiio sound 
-    playsound("output_median_filter.wav")
+    playsound("output_Median_Filter.wav")
 
 Test_data = [1, 7, 11, 4, 2]
 filter_size = 5
 
 class TestCode(unittest.TestCase):
-    def Test_median_filter(self):
-        median_val = median.median_filter(Test_data, filter_size)
+    def Test_Median_Filter(self):
+        median_val = median.Median_Filter(Test_data, filter_size)
         median_scipy_array = sc.signal.medfilt(Test_data, kernel_size = 5)
 
         med = median_scipy_array[len(median_scipy_array) // 2 + 1]
