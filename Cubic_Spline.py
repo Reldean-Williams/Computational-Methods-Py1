@@ -83,7 +83,7 @@ for ax in axs.flat:
 
 plt.show()
 
-# Writing the restored data to create an output audio file
+# Writing the restored data to create an output audio file for the cubic spline
 res_data1 = np.array(data_new)
 write("output_cubic_spline.wav", samplerate, res_data1.astype(np.int16))
 playsound("output_cubic_spline.wav")
