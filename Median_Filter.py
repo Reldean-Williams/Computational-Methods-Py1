@@ -24,13 +24,8 @@ def Median_Filter(data, window):
         # Sorting in window size arrays in ascending order
         window_array = np.sort(data)
 
-        # printing window size arrays
-        # print("window_array ", window_array)
-
         # storing median values
         median = window_array[padding]
-
-        # print("median",  median)
 
         return median
     else:
