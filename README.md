@@ -41,15 +41,14 @@ Si(x) = ai + bi · (x − xi) + ci · (x − xi)2 + di · (x − xi)3
 1. For the median filter, different lengths were explored to test the effectiveness of the restoration. The original, degraded and restored data for an audio is shown in the figures below.
 
 <img src="Original_Degraded_Clicks.png" width="450">
-<img src="Restored_Cubic_Spline.png" width="450">
+<img src="Restored_Median_Filter.png" width="450">
 
-The restored cubic spline waveform with the optimal filter length is given above.
+2. Observations drawn from the cubic splines is that the MSE is lower and the execution time is approximately 16 seconds.
+Using the cubic splines, I observe that this method gives an interpolating polynomial that is smoother and has smaller error than the median filtering as shown in the the figure below. The figure shows the MSE against varying filter sizes.
 
-2. Observations drawn from the cubic splines is that the MSE is lower and the execution time is 16 seconds.
-Using the cubic splines, I observe that this method gives an interpolating polynomial that is smoother and has smaller error than the median filtering.
+<img src="MSE_vs _Filter_size.png" width="450">
 
 3. Comparing the median filter and cubic splines interpolation methods, I notice that the cubic splines method achieves a lower MSE. 
-
 
 ---
 ## Credits
