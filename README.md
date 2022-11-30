@@ -53,7 +53,7 @@ Using the cubic splines, I observe that this method gives an interpolating polyn
 ---
 ## Credits
 
-This code was developed for purely academic purposes by Reldean Williams (github profile name - Reldean-Williams). 
+This code was developed for purely academic purposes by Reldean Williams (github profile - https://github.com/Reldean-Williams/Computational-Methods-Py1). 
 
 ## Resources:
 
